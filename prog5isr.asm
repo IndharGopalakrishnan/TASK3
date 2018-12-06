@@ -67,7 +67,7 @@
 		asciiU .FILL x0055
 		KBDR .FILL xFE02
 		KBSR .FILL xFE00
-		mask .FILL xC000 ;for setting the kbsr
+		mask .FILL x8000 ;for setting the kbsr. This is a bug fix yay.
 		location .FILL x4600
                 masktwo .FILL x8000
 .END
