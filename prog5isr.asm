@@ -57,7 +57,7 @@
                LD R3, saver3
                RTI
 
-        saver0 .BLKW #1
+        saver0 .BLKW #1 ;for saving registers
         saver1 .BLKW #1
         saver2 .BLKW #1
         saver3 .BLKW #1
