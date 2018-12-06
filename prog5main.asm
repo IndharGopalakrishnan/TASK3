@@ -7,7 +7,8 @@
                .ORIG x4000
 
 ; initialize the stack pointer
-	LD R6, Stack
+	LD R6, Stack ; universal stack pointer is R6
+			; our stack wil begin at x4000
 
 
 ; set up the keyboard interrupt vector table entry
