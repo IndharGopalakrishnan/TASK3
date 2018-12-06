@@ -4,7 +4,7 @@
 ; Keyboard ISR runs when a key is struck
 ; Checks for a valid RNA symbol and places it at x4600
                .ORIG x2600
-               ST R0, saver0
+               ST R0, saver0 ;save registers
                ST R1, saver1
                ST R2, saver2
                ST R3, saver3
@@ -67,7 +67,7 @@
 		asciiU .FILL x0055
 		KBDR .FILL xFE02
 		KBSR .FILL xFE00
-		mask .FILL xC000
+		mask .FILL xC000 ;for setting the kbsr
 		location .FILL x4600
                 masktwo .FILL x8000
 .END
