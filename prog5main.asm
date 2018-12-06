@@ -11,7 +11,7 @@
 
 
 ; set up the keyboard interrupt vector table entry
-	LD R5, addressOfISR
+	LD R5, addressOfISR	; x2600
 	STI R5, startOfKBIVT
 
 
@@ -96,6 +96,7 @@
 	;	.FILL NEXT_STATEC
 	;	.FILL NEXT_STATEG
 	;	.FILL NEXT_STATEU
+	;fsm
 
 	S1	.STRINGZ ""
 		.BLKW #1
