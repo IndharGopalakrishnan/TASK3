@@ -1,4 +1,4 @@
- ; Main.asm
+; Main.asm
 ; Name: Aditya Gupta
 ; UTEid: AG68834
 ; Continuously reads from x4600 making sure its not reading duplicate
@@ -31,6 +31,8 @@
 
 
 ; start of actual program
+	ADD R0,R0,#0
+	STI R0,Buffer
 	LEA R1, S1 ;set up inital state of the FSM 
 	top LDI R0, Buffer
 	BRz top ;therefore loops until a new character is at x4600 (in which case R0 = ascii value of that character)
