@@ -50,6 +50,8 @@
                AND R3, R2, R3 ;This sets R3's 14th bit equal to one
                NOT R3, R3 ;demorgan's law
                STI R3, KBSR ;thus that means that now IEN = 1 and bit 15 = 1 too
+	       LD R2, maskthree
+               STI R2, KBSR ;prevent ghost interrupting happening in non-match cases
 
                end LD R0, saver0
                LD R1, saver1
@@ -70,4 +72,5 @@
 		mask .FILL x8000 ;for setting the kbsr. This is a bug fix yay.
 		location .FILL x4600
                 masktwo .FILL x8000
+		maskthree .FILL x4000
 .END
