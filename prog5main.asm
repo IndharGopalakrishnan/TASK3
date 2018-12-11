@@ -31,6 +31,8 @@
 
 
 ; start of actual program
+	AND R1, R1, #0 ;clear BUFFER in our main setup
+	STI R1, Buffer ;this is to make it work with randomizing machine
 	LEA R1, S1 ;set up inital state of the FSM 
 	top LDI R0, Buffer
 	BRz top ;therefore loops until a new character is at x4600 (in which case R0 = ascii value of that character)
