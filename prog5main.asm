@@ -31,6 +31,8 @@
 
 
 ; start of actual program
+	AND R0,R0,#0
+	STI R0,Buffer
 	AND R1, R1, #0 ;clear BUFFER in our main setup
 	STI R1, Buffer ;this is to make it work with randomizing machine
 
